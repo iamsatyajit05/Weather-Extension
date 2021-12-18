@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    background-image: url('bgImg.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 275px;
+    height: 400px;
+}
+
+.contanier {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1));
+    border-right: 10px solid white;
+    min-height: 400px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    padding-top: 20px;
+}
+
+.searchBox {
+    width: 100%;
+    max-width: 225px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    border-radius: 2px 2px 2px 20px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.searchBox:focus {
+    background-color: rgb(255, 255, 255);
+}
+
+::placeholder { 
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.main {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    text-shadow: 1px 1px 10px #333;
+}
+
+.city {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.date {
+    color: white;
+    font-size: 17px;
+}
+
+.current{
+    margin-top: 10px;
+}
+
+.weatherType {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.temperature {
+    color: white;
+    font-size: 90px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    line-height: 80px;
+}
+
+.temperature span {
+    font-weight:500;
+}
+
+.feelsLike {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.hiLow {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.smallText {
+    font-size: 17px;
+    font-weight: 400;
+}
