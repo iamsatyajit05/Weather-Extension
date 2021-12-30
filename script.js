@@ -41,6 +41,9 @@ function displayResults(weather) {
     let weatherType = document.querySelector('.weatherType');
     weatherType.innerText = weather.weather[0].main;
 
+    let weatherIcon = document.querySelector(".weatherIcon");
+    weatherIcon.src = getIcon(weatherType, now);
+    
     let temp = document.querySelector('.temperature');
     temp.innerHTML = Math.round(weather.main.temp)+'<span>°c</span>';
 
@@ -62,3 +65,69 @@ function getDate(d) {
 
     return day+' '+date+' '+month+' '+year;
 }
+
+function getIcon(weatherType, d) {
+    let icon = "";
+
+    switch (weatherType) {
+        case "Smoke":
+            icon = "icons/fog.png";
+            return icon;
+
+        case "Fog":
+            icon = "icons/fog.png";
+            return icon;
+
+        case "Rain":
+            icon = "icons/rain.png";
+            return icon;
+
+        case "Snow":
+            icon = "icons/snow.png";
+            return icon;
+
+        case "Clouds":
+            icon = "icons/clouds.png";
+            return icon;
+
+        case "Torando":
+            icon = "icons/tornado.png";
+            return icon;
+
+        case "Thunderstrom":
+            icon = "icons/thunderstrom.png";
+            return icon;
+
+        case "Haze":
+            icon = "icons/haze.png";
+            return icon;
+
+        case "Drizzle":
+            icon = "icons/drizzle.png";
+            return icon;
+
+        case "Sand":
+            icon = "icons/sand.png";
+            return icon;
+
+        case "Dust":
+            icon = "icons/sand.png";
+            return icon;
+
+        case "Squall":
+            icon = "icons/squall.png";
+            return icon;
+
+        case "Clear":
+            if (d.getHours() < 19) {
+                icon = "icons/clearDay.png"
+                return icon;
+            }
+
+            else {
+                icon = "icons/clearNight.png";
+                return icon;
+            }
+    }
+}
+
