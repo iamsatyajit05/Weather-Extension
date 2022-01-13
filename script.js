@@ -42,7 +42,7 @@ function displayResults(weather) {
     weatherType.innerText = weather.weather[0].main;
 
     let weatherIcon = document.querySelector(".weatherIcon");
-    weatherIcon.src = getIcon(weatherType, now);
+    weatherIcon.src = getIcon(weatherType.innerText, now);
     
     let temp = document.querySelector('.temperature');
     temp.innerHTML = Math.round(weather.main.temp)+'<span>°c</span>';
